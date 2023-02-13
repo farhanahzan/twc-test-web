@@ -28,7 +28,7 @@ function New() {
         query.push('/Login');
       } else {
         const { data } = await axios.post(
-          'http://localhost:4000/',
+          'https://twc-test-api.cyclic.app/',
           {},
           { withCredentials: true }
         );
@@ -54,7 +54,7 @@ function New() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = await axios
-      .post('http://localhost:4000/contacts/new', values, {
+      .post('https://twc-test-api.cyclic.app/contacts/new', values, {
         withCredentials: true,
       })
       .then((res) => {

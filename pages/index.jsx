@@ -20,7 +20,7 @@ export default function Home() {
         query.push('/Login');
       } else {
         const { data } = await axios.post(
-          'http://localhost:4000',
+          'https://twc-test-api.cyclic.app',
           {},
           { withCredentials: true }
         );

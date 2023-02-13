@@ -21,7 +21,7 @@ function Register() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        'http://localhost:4000/register',
+        'https://twc-test-api.cyclic.app/register',
         {
           ...values,
         },
