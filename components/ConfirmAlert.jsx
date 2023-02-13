@@ -20,7 +20,7 @@ function ConfirmAlert({
           <div className="relative bg-white rounded-3xl shadow-slate-700 shadow-2xl ">
             <div className="p-6 text-center">
               <h3 className="mb-5 text-lg font-semibold text-primary">
-                {content} {contacts.fullname}?
+                {content} &apos;{contacts.fullname}&lsquo;?
               </h3>
               {button1 ? (
                 <button

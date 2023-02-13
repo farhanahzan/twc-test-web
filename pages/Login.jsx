@@ -102,7 +102,7 @@ function Login() {
                   login
                 </button>
                 <p className="mt-2 text-slate-50 ">
-                  Don't have an account?
+                  Don&apos;t have an account?
                   <Link className="font-bold underline" href="/Register">
                     Register
                   </Link>
