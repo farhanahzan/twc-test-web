@@ -29,15 +29,11 @@ function Allcontacts() {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     const data = await axios
-      .put(
-        `https://twc-test-api.cyclic.app/contacts/${editContactId}`,
-        editValues,
-        {
-          withCredentials: true,
-        }
-      )
+      .put(`http://localhost:4000/contacts/${editContactId}`, editValues, {
+        withCredentials: true,
+      })
       .then((res) => {
-        setChange(true);
+        setChange(true)
       })
       .catch((err) => console.log(err));
   };
@@ -54,9 +50,9 @@ function Allcontacts() {
 
   const handleDelete = async (contactId) => {
     await axios
-      .delete(`https://twc-test-api.cyclic.app/contacts/${contactId}`)
+      .delete(`http://localhost:4000/contacts/${contactId}`)
       .then((res) => {
-        setChange(true);
+        setChange(true)
       })
       .catch((err) => {
         console.log(err);
@@ -66,7 +62,7 @@ function Allcontacts() {
   useEffect(() => {
     const getAllContact = async () => {
       await axios
-        .get('https://twc-test-api.cyclic.app/contacts')
+        .get('http://localhost:4000/contacts')
         .then((res) => {
           setAllContacts(res.data.contact);
         })
@@ -84,7 +80,7 @@ function Allcontacts() {
         query.push('/Login');
       } else {
         const { data } = await axios.post(
-          'https://twc-test-api.cyclic.app',
+          'http://localhost:4000',
           {},
           { withCredentials: true }
         );
