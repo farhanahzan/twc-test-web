@@ -2,7 +2,6 @@ import React from 'react';
 import Alert from './Alert';
 
 function ConfirmAlert({
-    
   contacts,
   content,
   button1,
@@ -10,7 +9,6 @@ function ConfirmAlert({
   handleButton1,
   handleButton2,
 }) {
-   
   return (
     <>
       <div
@@ -22,7 +20,7 @@ function ConfirmAlert({
           <div className="relative bg-white rounded-3xl shadow-slate-700 shadow-2xl ">
             <div className="p-6 text-center">
               <h3 className="mb-5 text-lg font-semibold text-primary">
-                {content} `"`{contacts.fullname}`"`?
+                {content} {contacts.fullname}?
               </h3>
               {button1 ? (
                 <button

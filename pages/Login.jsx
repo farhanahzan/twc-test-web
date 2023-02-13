@@ -51,14 +51,14 @@ function Login() {
     }
   }, [showError]);
 
- useEffect(() => {
-   const verifyUser = async () => {
-     if (cookies.jwt) {
-       query.push('/');
-     }
-   }
-   verifyUser();
- }, [cookies, query, removeCookie]);
+  useEffect(() => {
+    const verifyUser = async () => {
+      if (cookies.jwt) {
+        query.push('/');
+      }
+    };
+    verifyUser();
+  }, [cookies, query, removeCookie]);
   return (
     <>
       <Meta title="Login Now" />
@@ -102,7 +102,7 @@ function Login() {
                   login
                 </button>
                 <p className="mt-2 text-slate-50 ">
-                  Don't have an account?{` `}
+                  Don't have an account?
                   <Link className="font-bold underline" href="/Register">
                     Register
                   </Link>
